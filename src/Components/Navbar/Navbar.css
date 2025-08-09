@@ -1,0 +1,66 @@
+.navbar {
+  background-color: #131722 !important;
+}
+
+.navbar .nav-link {
+  color: white;
+}
+
+.navbar .nav-link:hover {
+  color: #00adb5;
+}
+
+.offcanvas {
+  background-color: #131722 !important;
+}
+
+.offcanvas .nav-link {
+  color: white;
+}
+
+.offcanvas .nav-link:hover {
+  color: #00adb5;
+}
+
+.offcanvas-title {
+  color: white;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-toggler:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.navbar .container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+/* استهداف روابط النافبار فقط في الشاشات الكبيرة */
+.navbar-nav.d-lg-flex .nav-link {
+  position: relative;
+  color: #fff;
+  transition: all 0.3s ease;
+  text-shadow: none;
+}
+
+/* الخط المتحرك تحت النص */
+.navbar-nav.d-lg-flex .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* التأثير عند الهوفر */
+.navbar-nav.d-lg-flex .nav-link:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.navbar-nav.d-lg-flex .nav-link:hover::after {
+  width: 60%;
+}
