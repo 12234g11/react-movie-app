@@ -1,6 +1,6 @@
 {
   "name": "app2",
-  "homepage": "https://username.github.io/repo-name",
+  "homepage": "https://username.github.io/react-movie-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
