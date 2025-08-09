@@ -27,14 +27,12 @@ export default function Navbar() {
     }
   };
 
-  // لو راجع من صفحة تانية ومعاه state.scrollTo
+
 React.useEffect(() => {
   if (location.state?.scrollTo) {
     setTimeout(() => {
       scrollToSection(location.state.scrollTo);
     }, 300);
-
-    // مسح الـ state بعد الاستخدام
     window.history.replaceState({}, document.title);
   }
 }, [location.state]);

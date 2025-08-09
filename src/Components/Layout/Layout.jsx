@@ -8,7 +8,7 @@ import ScrollToTopOnNavigate from "../ScrollToTopOnNavigate/ScrollToTopOnNavigat
 export default function Layout() {
   return (
     <>
-      <ScrollToTopOnNavigate /> {/* هنا علشان يتنفذ مع أي صفحة */}
+      <ScrollToTopOnNavigate />
       <Navbar />
       <div className="container mt-5 pt-5">
         <Outlet />

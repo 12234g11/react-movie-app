@@ -1,8 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import MediaItem from "../MediaItem/MediaItem";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 export default function Home() {
   const [movies, setTrendingMovies] = useState([]);
   const [tvs, setTrendingTv] = useState([]);
@@ -20,10 +19,6 @@ export default function Home() {
     getTrending("tv", setTrendingTv);
     getTrending("person", setTrendingPeople);
   }, []);
-
-  useEffect(() => {
-  AOS.init({ duration: 800, once: true });
-}, []);
 
   return (
     <>
