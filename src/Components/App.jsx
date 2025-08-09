@@ -1,25 +1,22 @@
 import React from 'react';
 import '../App.css';
-import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './Layout/Layout';
 import Home from './Home/Home';
-
 import ItemDetailes from './ItemDetailes/ItemDetailes';
 
-let routers = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout />,
-    children: [
-      { index: true, element: <Navigate to="home" /> },
-      { path: 'home', element: <Home /> },
-      { path: 'itemdetailes/:id/:media_type', element: <ItemDetailes /> },
-    ],
-  },
-]);
-
 function App() {
-  return <RouterProvider router={routers} />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Navigate to="home" />} />
+          <Route path="home" element={<Home />} />
+          <Route path="itemdetailes/:id/:media_type" element={<ItemDetailes />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
